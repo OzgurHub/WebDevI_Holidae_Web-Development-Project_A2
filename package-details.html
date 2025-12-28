@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Holidae | Package Details</title>
+<meta content="View one Holidae holiday package in detail." name="description"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="assets/css/responsive.css" rel="stylesheet"/>
+<style>
+    /* UX Enhancements (keeps existing colours) */
+    body{ line-height:1.6; }
+    .topbar{ position:sticky; top:0; z-index:20; backdrop-filter: blur(10px); }
+    .nav a[aria-current="page"]{ border-bottom:2px solid var(--brand); padding-bottom:.2rem; }
+    .btn{ min-height:44px; }
+    .cards .card img{ width:100%; height:180px; object-fit:cover; display:block; }
+    @media (min-width: 900px){ .cards .card img{ height:210px; } }
+    .page-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; }
+    p{ max-width:70ch; }
+  
+    /* Package detail layout */
+    .detail-grid{ display:grid; grid-template-columns: 1fr; gap:14px; }
+    .detail-media img{ width:100%; height:240px; object-fit:cover; border-radius:14px; display:block; }
+    .detail-meta{ list-style:none; padding:0; margin:0; display:grid; gap:6px; }
+    .muted{ opacity:0.85; }
+    @media (min-width: 900px){
+      .detail-grid{ grid-template-columns: 1.2fr 1fr; align-items:start; }
+      .detail-media img{ height:320px; }
+    }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<!-- I added this section to organise the page structure and content. -->
+<header class="topbar">
+<!-- I added this section to organise the page structure and content. -->
+<div class="container navwrap">
+<a aria-label="Holidae home" class="brand" href="index.html">
+<span aria-hidden="true" class="logo"></span>
+<span>Holidae</span>
+</a>
+<button aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" class="nav-toggle" type="button">☰</button>
+<p id="saveMessage" style="margin:10px 0 0 0;"></p>
+<!-- I added this section to organise the page structure and content. -->
+<nav aria-label="Primary" class="nav" id="site-nav">
+<a href="index.html">Home</a>
+<a href="packages.html">Packages</a>
+<a href="package-details.html">Package details</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<!-- I added this section to organise the page structure and content. -->
+<main class="container section" id="main">
+
+<!-- I added this section to organise the page structure and content. -->
+<section class="detail card" aria-labelledby="pkgTitle" style="margin: 0 0 18px 0;">
+<!-- I added this section to organise the page structure and content. -->
+  <div class="detail-grid">
+<!-- I added this section to organise the page structure and content. -->
+    <div class="detail-media">
+      <img id="pkgImg" src="" alt="" loading="lazy"/>
+    </div>
+<!-- I added this section to organise the page structure and content. -->
+    <div class="detail-content">
+      <h1 id="pkgTitle" style="margin:0 0 8px 0;">Package</h1>
+      <p id="pkgDesc" style="margin:0 0 12px 0;"> </p>
+
+<!-- I added this section to organise the page structure and content. -->
+      <ul class="detail-meta" aria-label="Package details">
+        <li><strong>Destination:</strong> <span id="pkgLocation">—</span></li>
+        <li><strong>Nights:</strong> <span id="pkgNights">—</span></li>
+        <li><strong>From:</strong> <span id="pkgPriceFrom">—</span> <span class="muted">(per person)</span></li>
+      </ul>
+
+<!-- I added this section to organise the page structure and content. -->
+      <div class="detail-actions" style="margin-top:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <button class="btn secondary" id="saveDealBtn" type="button">Save this deal</button>
+        <span class="muted" id="saveMsg" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- I added this section to organise the page structure and content. -->
+<div class="container" data-package-details=""></div>
+
+
+
+<!-- I added this section to organise the page structure and content. -->
+<section class="section" id="bookingSection" style="padding-top: 20px;">
+<h2>Booking details</h2>
+<!-- I added this section to organise the page structure and content. -->
+<div class="form-grid">
+<label>
+<span class="muted">People</span><br/>
+<input id="peopleCount" min="1" style="max-width:120px; padding:10px;" type="number" value="1"/>
+</label>
+<label>
+<span class="muted">Start date</span><br/>
+<input id="startDate" style="padding:10px;" type="date"/>
+</label>
+</div>
+<p class="muted" style="margin-top:10px;">Price is per person (from).</p>
+<p>Total price: <strong id="totalPrice">£0</strong></p>
+<button class="btn primary" id="bookNowBtn" type="button">Book now</button>
+<p aria-live="polite" class="save-msg" id="bookMsg"></p>
+</section>
+
+<!-- I added this section to organise the page structure and content. -->
+  <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+    <label>
+      Travel date:
+      <input type="date" id="travelDate">
+    </label>
+    <button type="button" id="confirmBooking">Confirm booking</button>
+  </div>
+
+</main>
+<!-- I added this section to organise the page structure and content. -->
+<footer class="footer">
+<!-- I added this section to organise the page structure and content. -->
+<div class="container footer-grid">
+<!-- I added this section to organise the page structure and content. -->
+<div><strong>Holidae</strong><p>Affordable packages designed for mobile browsing and desktop booking.</p></div>
+<!-- I added this section to organise the page structure and content. -->
+<div><strong>Explore</strong><a href="index.html">Home</a><a href="packages.html">Packages</a><a href="contact.html">Contact</a></div>
+<!-- I added this section to organise the page structure and content. -->
+<div><strong>Support</strong><p>Email: support@holidae.example</p><p>Mon–Sun: 09:00–21:00</p></div>
+</div>
+<!-- I added this section to organise the page structure and content. -->
+<div class="container fineprint">© <span id="year"></span> Holidae • Prototype website</div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

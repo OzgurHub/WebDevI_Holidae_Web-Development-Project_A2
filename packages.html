@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Holidae | Packages</title>
+<meta content="Browse Holidae holiday packages and compare deals." name="description"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="assets/css/responsive.css" rel="stylesheet"/>
+<style>
+    /* UX Enhancements (keeps existing colours) */
+    body{ line-height:1.6; }
+    .topbar{ position:sticky; top:0; z-index:20; backdrop-filter: blur(10px); }
+    .nav a[aria-current="page"]{ border-bottom:2px solid var(--brand); padding-bottom:.2rem; }
+    .btn{ min-height:44px; }
+    .cards .card img{ width:100%; height:180px; object-fit:cover; display:block; }
+    @media (min-width: 900px){ .cards .card img{ height:210px; } }
+    .page-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; }
+    p{ max-width:70ch; }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<!-- I added this section to organise the page structure and content. -->
+<header class="topbar">
+<!-- I added this section to organise the page structure and content. -->
+<div class="container navwrap">
+<a aria-label="Holidae home" class="brand" href="index.html">
+<span aria-hidden="true" class="logo"></span>
+<span>Holidae</span>
+</a>
+<button aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" class="nav-toggle" type="button">☰</button>
+<!-- I added this section to organise the page structure and content. -->
+<nav aria-label="Primary" class="nav" id="site-nav">
+<a href="index.html">Home</a>
+<a href="packages.html">Packages</a>
+<a href="package-details.html?id=maldives">Package details</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<!-- I added this section to organise the page structure and content. -->
+<div id="packageControls" style="margin: 0 20px 20px 20px; display:flex; gap:12px; flex-wrap:wrap;">
+<label class="muted">Destination:
+    <select id="packageLocationFilter" style="padding:10px; margin-left:6px;">
+<option value="all">All</option>
+</select>
+</label>
+<label class="muted">Saved:
+    <select id="packageSavedFilter" style="padding:10px; margin-left:6px;">
+<option value="all">All</option>
+<option value="saved">Saved only</option>
+</select>
+</label>
+</div>
+
+
+<!-- I added this section to organise the page structure and content. -->
+<div id="packageTools" style="margin: 20px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+  <input type="text" id="packageSearch" placeholder="Search packages" style="padding:10px; flex: 1; min-width: 220px;">
+  <select id="packageFilter" style="padding:10px; min-width: 180px;">
+    <option value="all">All destinations</option>
+  </select>
+  <select id="packageSort" style="padding:10px; min-width: 180px;">
+    <option value="default">Sort: Default</option>
+    <option value="az">Sort: A → Z</option>
+    <option value="za">Sort: Z → A</option>
+    <option value="priceLow">Sort: Price Low → High</option>
+    <option value="priceHigh">Sort: Price High → Low</option>
+  </select>
+  
+<!-- I added this section to organise the page structure and content. -->
+  <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+    <span style="white-space:nowrap;">Price range (£):</span>
+    <input type="number" id="priceMin" placeholder="Min" style="padding:10px; width:110px;">
+    <input type="number" id="priceMax" placeholder="Max" style="padding:10px; width:110px;">
+    <button type="button" id="priceClear" style="padding:10px 14px; border:1px solid rgba(0,0,0,0.15); border-radius:10px; background:transparent; cursor:pointer;">Clear</button>
+  </div>
+
+  <label style="display:flex; align-items:center; gap:8px; padding:8px 10px; border:1px solid rgba(0,0,0,0.15); border-radius:10px;">
+    <input type="checkbox" id="savedOnly">
+    Saved only
+  </label>
+  <a href="saved.html" style="padding:10px 14px; border:1px solid rgba(0,0,0,0.15); border-radius:10px; text-decoration:none; display:inline-block;">Saved deals</a>
+  <a href="compare.html" style="padding:10px 14px; border:1px solid rgba(0,0,0,0.15); border-radius:10px; text-decoration:none; display:inline-block;">Compare</a>
+</div>
+
+<!-- I added this section to organise the page structure and content. -->
+<main id="main">
+<!-- I added this section to organise the page structure and content. -->
+<section class="section">
+<!-- I added this section to organise the page structure and content. -->
+<div class="container">
+<!-- I added this section to organise the page structure and content. -->
+<div class="section-head">
+<h1>Holiday packages</h1>
+<p>Compare popular trips with clear pricing and what’s included.</p>
+</div>
+<!-- I added this section to organise the page structure and content. -->
+<div class="cards-grid">
+<article class="card package-card" data-id="maldives">
+<!-- I added this section to organise the page structure and content. -->
+<div class="card-media">
+<img alt="Sun &amp; Beach — Maldives" src="assets/img/img-beach.jpg"/>
+</div>
+<!-- I added this section to organise the page structure and content. -->
+<div class="card-body">
+<h2>Sun &amp; Beach — Maldives</h2>
+<p class="muted">5 nights • Flights included • From £299</p>
+<!-- I added this section to organise the page structure and content. -->
+<ul class="bullets">
+<li>Beachfront 4★ resort</li>
+<li>Speedboat transfers</li>
+<li>Breakfast included</li>
+</ul>
+<a class="btn primary" href="package-details.html?id=maldives">View deal</a>
+</div>
+</article>
+<article class="card package-card" data-id="istanbul">
+<!-- I added this section to organise the page structure and content. -->
+<div class="card-media">
+<img alt="City Break — Istanbul, Turkey" src="assets/img/img-city.jpg"/>
+</div>
+<!-- I added this section to organise the page structure and content. -->
+<div class="card-body">
+<h2>City Break — Istanbul, Turkey</h2>
+<p class="muted">3 nights • Central hotel • From £219</p>
+<!-- I added this section to organise the page structure and content. -->
+<ul class="bullets">
+<li>4★ central stay</li>
+<li>Airport transfers</li>
+<li>Optional guided tour</li>
+</ul>
+<a class="btn primary" href="package-details.html?id=istanbul">View deal</a>
+</div>
+</article>
+<article class="card package-card" data-id="swiss-alps">
+<!-- I added this section to organise the page structure and content. -->
+<div class="card-media">
+<img alt="Mountains &amp; Nature — Swiss Alps, Switzerland" src="assets/img/img-mountain.jpg"/>
+</div>
+<!-- I added this section to organise the page structure and content. -->
+<div class="card-body">
+<h2>Mountains &amp; Nature — Swiss Alps, Switzerland</h2>
+<p class="muted">4 nights • Guided hikes • From £259</p>
+<!-- I added this section to organise the page structure and content. -->
+<ul class="bullets">
+<li>Guided hiking routes</li>
+<li>Scenic train passes</li>
+<li>Mountain hotel</li>
+</ul>
+<a class="btn primary" href="package-details.html?id=swiss-alps">View deal</a>
+</div>
+</article>
+<article class="card package-card" data-id="phuket">
+<!-- I added this section to organise the page structure and content. -->
+<div class="card-media">
+<img alt="Resort Escape — Phuket, Thailand" src="assets/img/img-resort.jpg"/>
+</div>
+<!-- I added this section to organise the page structure and content. -->
+<div class="card-body">
+<h2>Resort Escape — Phuket, Thailand</h2>
+<p class="muted">4 nights • Spa access • From £349</p>
+<!-- I added this section to organise the page structure and content. -->
+<ul class="bullets">
+<li>Spa session options</li>
+<li>Pool + sauna facilities</li>
+<li>Quiet resort location</li>
+</ul>
+<a class="btn primary" href="package-details.html?id=phuket">View deal</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<!-- I added this section to organise the page structure and content. -->
+<footer class="footer">
+<!-- I added this section to organise the page structure and content. -->
+<div class="container footer-grid">
+<!-- I added this section to organise the page structure and content. -->
+<div><strong>Holidae</strong><p>Affordable packages designed for mobile browsing and desktop booking.</p></div>
+<!-- I added this section to organise the page structure and content. -->
+<div><strong>Explore</strong><a href="index.html">Home</a><a href="package-details.html?id=maldives">Package details</a><a href="contact.html">Contact</a></div>
+<!-- I added this section to organise the page structure and content. -->
+<div><strong>Support</strong><p>Email: support@holidae.example</p><p>Mon–Sun: 09:00–21:00</p></div>
+</div>
+<!-- I added this section to organise the page structure and content. -->
+<div class="container fineprint">© <span id="year"></span> Holidae • Prototype website</div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

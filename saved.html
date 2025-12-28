@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Holidae | Packages</title>
+<meta content="Browse Holidae holiday packages and compare deals." name="description"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="assets/css/responsive.css" rel="stylesheet"/>
+<style>
+    /* UX Enhancements (keeps existing colours) */
+    body{ line-height:1.6; }
+    .topbar{ position:sticky; top:0; z-index:20; backdrop-filter: blur(10px); }
+    .nav a[aria-current="page"]{ border-bottom:2px solid var(--brand); padding-bottom:.2rem; }
+    .btn{ min-height:44px; }
+    .cards .card img{ width:100%; height:180px; object-fit:cover; display:block; }
+    @media (min-width: 900px){ .cards .card img{ height:210px; } }
+    .page-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; }
+    p{ max-width:70ch; }
+  </style>
+</head>
+<body>
+<!-- I added this section to organise the page structure and content. -->
+<header class="topbar">
+<!-- I added this section to organise the page structure and content. -->
+<div class="container navwrap">
+<a aria-label="Holidae home" class="brand" href="index.html">
+<span aria-hidden="true" class="logo"></span>
+<span>Holidae</span>
+</a>
+<button aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" class="nav-toggle" type="button">☰</button>
+<!-- I added this section to organise the page structure and content. -->
+<nav aria-label="Primary" class="nav" id="site-nav">
+<a href="index.html">Home</a>
+<a href="packages.html">Packages</a>
+<a href="package-details.html?id=maldives">Package details</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<!-- I added this section to organise the page structure and content. -->
+<div style="margin:20px; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+  <h1 style="margin:0;">Saved deals</h1>
+  <a href="packages.html" style="padding:10px 14px; border:1px solid rgba(0,0,0,0.15); border-radius:10px; text-decoration:none; display:inline-block;">Back to packages</a>
+</div>
+
+<!-- I added this section to organise the page structure and content. -->
+<main style="padding: 0 20px 20px 20px;">
+  <p id="savedEmpty" style="margin-top:0;">You have no saved deals yet. Go to Packages and click “Save this deal”.</p>
+<!-- I added this section to organise the page structure and content. -->
+  <div id="savedList" style="display:grid; gap:16px;"></div>
+</main>
+
+<!-- I added this section to organise the page structure and content. -->
+<footer class="footer">
+<!-- I added this section to organise the page structure and content. -->
+<div class="container footer-grid">
+<!-- I added this section to organise the page structure and content. -->
+<div><strong>Holidae</strong><p>Affordable packages designed for mobile browsing and desktop booking.</p></div>
+<!-- I added this section to organise the page structure and content. -->
+<div><strong>Explore</strong><a href="index.html">Home</a><a href="package-details.html?id=maldives">Package details</a><a href="contact.html">Contact</a></div>
+<!-- I added this section to organise the page structure and content. -->
+<div><strong>Support</strong><p>Email: support@holidae.example</p><p>Mon–Sun: 09:00–21:00</p></div>
+</div>
+<!-- I added this section to organise the page structure and content. -->
+<div class="container fineprint">© <span id="year"></span> Holidae • Prototype website</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

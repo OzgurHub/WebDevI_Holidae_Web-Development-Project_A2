@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Holidae | Contact</title>
+  <meta name="description" content="Contact Holidae to enquire about a holiday package." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <style>
+    /* UX Enhancements (keeps existing colours) */
+    body{ line-height:1.6; }
+    .topbar{ position:sticky; top:0; z-index:20; backdrop-filter: blur(10px); }
+    .nav a[aria-current="page"]{ border-bottom:2px solid var(--brand); padding-bottom:.2rem; }
+    .btn{ min-height:44px; }
+    .cards .card img{ width:100%; height:180px; object-fit:cover; display:block; }
+    @media (min-width: 900px){ .cards .card img{ height:210px; } }
+    .page-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; }
+    p{ max-width:70ch; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+<!-- I added this section to organise the page structure and content. -->
+  <header class="topbar">
+<!-- I added this section to organise the page structure and content. -->
+    <div class="container navwrap">
+      <a class="brand" href="index.html" aria-label="Holidae home">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Holidae</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
+
+<!-- I added this section to organise the page structure and content. -->
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="package-details.html">Package details</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+<!-- I added this section to organise the page structure and content. -->
+  <main id="main" class="container section">
+<!-- I added this section to organise the page structure and content. -->
+    <div class="page-head">
+<!-- I added this section to organise the page structure and content. -->
+      <div>
+        <h1>Contact Holidae</h1>
+        <p>Send an enquiry and we’ll get back to you. (Prototype form)</p>
+      </div>
+    </div>
+
+    <!-- Image 1/4 -->
+<!-- I added this section to organise the page structure and content. -->
+    <div class="banner card">
+      <img src="assets/img/img-hero.jpg" alt="Holiday banner image for the contact page." />
+<!-- I added this section to organise the page structure and content. -->
+      <div class="banner-overlay"><strong>Need help?</strong><span>We’re here for you</span></div>
+    </div>
+
+<!-- I added this section to organise the page structure and content. -->
+    <section class="contact-grid">
+<!-- I added this section to organise the page structure and content. -->
+      <form class="card form" action="#" method="post">
+        <h2>Your enquiry</h2>
+
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="e.g., Ozgur Serin" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="e.g., ozgur@example.com" required />
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option>Package enquiry</option>
+          <option>Changes / upgrades</option>
+          <option>Payment question</option>
+          <option>Other</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us what you need..."></textarea>
+
+        <button class="btn btn-primary" type="submit">Send enquiry</button>
+        <p class="small">This is a prototype — form submission is not connected.</p>
+      </form>
+
+      <aside class="grid cards">
+        <!-- Image 2/4 -->
+        <article class="card">
+          <img src="assets/img/img-support.jpg" alt="Customer support agent assisting a customer." />
+<!-- I added this section to organise the page structure and content. -->
+          <div class="card-body">
+            <h3>Customer support</h3>
+            <p>Mon–Sun, 09:00–21:00</p>
+          </div>
+        </article>
+
+        <!-- Image 3/4 -->
+        <article class="card">
+          <img src="assets/img/img-map.jpg" alt="Map image representing a location." />
+<!-- I added this section to organise the page structure and content. -->
+          <div class="card-body">
+            <h3>Where we are</h3>
+            <p>London (prototype address)</p>
+          </div>
+        </article>
+
+        <!-- Image 4/4 -->
+        <article class="card">
+          <img src="assets/img/img-resort.jpg" alt="Resort image reinforcing the Holidae brand." />
+<!-- I added this section to organise the page structure and content. -->
+          <div class="card-body">
+            <h3>Still choosing?</h3>
+            <p><a class="link" href="packages.html">Browse packages →</a></p>
+          </div>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+<!-- I added this section to organise the page structure and content. -->
+  <footer class="footer">
+<!-- I added this section to organise the page structure and content. -->
+    <div class="container footer-grid">
+<!-- I added this section to organise the page structure and content. -->
+      <div><strong>Holidae</strong><p>Affordable packages designed for mobile browsing and desktop booking.</p></div>
+<!-- I added this section to organise the page structure and content. -->
+      <div><strong>Explore</strong><a href="index.html">Home</a><a href="packages.html">Packages</a><a href="package-details.html">Package details</a></div>
+<!-- I added this section to organise the page structure and content. -->
+      <div><strong>Support</strong><p>Email: support@holidae.example</p><p>Mon–Sun: 09:00–21:00</p></div>
+    </div>
+<!-- I added this section to organise the page structure and content. -->
+    <div class="container fineprint">© <span id="year"></span> Holidae • Prototype website</div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
